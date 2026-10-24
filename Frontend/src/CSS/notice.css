@@ -1,0 +1,231 @@
+/* General Page and Container */
+.add-notice-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #F4F7F6; /* Light background */
+    font-family: 'Roboto', Arial, sans-serif;
+    padding: 20px;
+}
+
+.form-card-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 650px;
+}
+
+/* Header Styling */
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #E0E0E0;
+}
+
+.form-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.header-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #007BFF; /* Accent Color */
+}
+
+/* Form Fields */
+.notice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field-group label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Common input/select/textarea styling */
+.form-field-group input,
+.form-field-group textarea,
+.form-field-group select { 
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #CED4DA;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; 
+}
+
+.form-field-group input:focus,
+.form-field-group textarea:focus,
+.form-field-group select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.form-field-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* --- Select/Dropdown Specific Styling --- */
+.form-field-group select {
+    /* Customizing select appearance for modern look */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Custom arrow using SVG (blue) */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.3L146.2%20202.7%2018.6%2074.7a17.6%2017.6%200%200%200-24.7%2024.9l130.6%20129.8c6.9%206.9%2017.9%206.8%2024.8%200l130.6-129.8c6.8-6.9%206.8-17.9-.1-24.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 0.7em auto;
+}
+
+/* Styling for when the placeholder option is selected */
+.form-field-group select.placeholder-selected {
+    color: #999; /* Grey out the placeholder text */
+}
+
+/* Ensure options are black */
+.form-field-group select option {
+    color: #333;
+}
+
+/* Disable the placeholder option visually */
+.form-field-group select option:first-child {
+    color: #999;
+}
+/* --- End Select/Dropdown Specific Styling --- */
+
+
+/* Date Fields specific layout */
+.date-field-row {
+    display: flex;
+    gap: 20px;
+}
+
+.date-field {
+    flex: 1;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, opacity 0.3s;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.submit-button:disabled {
+    background-color: #A0C4FF;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Status Messages */
+.status-message {
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.loading-state {
+    background-color: #E3F2FD;
+    color: #1565C0;
+}
+
+.error-state {
+    background-color: #FFCDD2;
+    color: #C62828;
+}
+
+.success-state {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* View Notices Link */
+.view-notices-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #6C757D;
+    padding-top: 15px;
+    border-top: 1px solid #E9ECEF;
+}
+
+.view-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 8px;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.view-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-card-container {
+        padding: 20px 25px;
+    }
+    
+    .date-field-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

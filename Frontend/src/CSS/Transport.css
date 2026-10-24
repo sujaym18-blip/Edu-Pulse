@@ -1,0 +1,110 @@
+.transport-container {
+    padding: 30px 20px;
+    background-color: #F0F2F5;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.loading,
+.error,
+.no-transports {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.loading {
+    background-color: #e6f7ff;
+    color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #DC3545;
+    border: 1px solid #f5c6cb;
+}
+
+.no-transports {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* Card Grid Layout */
+.transport-container > div:not(.loading):not(.error):not(.no-transports) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.transport-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.transport-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.transport-card h2 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #DEE2E6;
+    padding-bottom: 10px;
+}
+
+.transport-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #EEE;
+    font-size: 0.95rem;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item label {
+    font-weight: 600;
+    color: #555;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+/* Status Styling */
+.status {
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.status.active {
+    background-color: #d4edda;
+    color: #28A745;
+}
+
+.status.inactive {
+    background-color: #f8d7da;
+    color: #DC3545;
+}

@@ -1,0 +1,267 @@
+/* General Colors */
+.hostel-portal-container {
+    --blue-primary: #1976d2; /* Deeper blue for modern look */
+    --green-success: #43a047;
+    --yellow-pending: #ffb300;
+    --red-error: #e53935;
+    --gray-light: #f4f6f9;
+    --dark-text: #263238;
+    --medium-text: #757575;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/* === 1. Layout and Header === */
+.hostel-portal-container {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9; /* --gray-light */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    color: #263238; /* --dark-text */
+}
+
+.hostel-portal-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-icon {
+    font-size: 4rem; /* Larger header emoji */
+    margin-bottom: 5px;
+    display: block;
+}
+
+.hostel-portal-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #1976d2; /* --blue-primary */
+}
+
+.hostel-portal-header p {
+    font-size: 1rem;
+    color: #757575; /* --medium-text */
+}
+
+/* === 2. Grid and Card Structure === */
+.details-card-wrapper {
+    width: 100%;
+    max-width: 900px; /* Slightly tighter width */
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* Ratio change for fee card emphasis */
+    gap: 25px;
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.info-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Card Header */
+.card-header-hostel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header-hostel .icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #1976d2; /* --blue-primary */
+}
+
+.card-header-hostel h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Details Card */
+.student-details-card .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #f0f0f0;
+}
+.student-details-card .detail-row p {
+    font-weight: 400;
+    color: #757575; /* --medium-text */
+    margin: 0;
+}
+.student-details-card .detail-row strong {
+    font-weight: 700;
+    color: #263238; /* --dark-text */
+    text-align: right;
+    margin: 0;
+}
+
+.room-display strong {
+    color: #1976d2; /* Highlight room number */
+}
+
+/* Amenities Section */
+.amenities-heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #1976d2; /* --blue-primary */
+    font-weight: 500;
+}
+
+.amenities-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 5px;
+}
+
+.amenity-name-tag {
+    background-color: #e3f2fd; /* Light blue background */
+    color: #1976d2; /* --blue-primary */
+    border: none;
+    padding: 5px 12px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.no-amenities {
+    color: #757575; /* --medium-text */
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* === 3. Fee Card Styling (Emphasis) === */
+.fee-payment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fee-total-display {
+    padding: 25px 0;
+    width: 100%;
+    background-color: #fce4ec; /* Light pink background for financial focus */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.fee-total-display .label {
+    display: block;
+    font-size: 0.9rem;
+    color: #4e4e4e;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.fee-total-display .amount-value {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #263238; /* --dark-text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Status Bar */
+.fee-status-bar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.paid-status {
+    background-color: #e8f5e9;
+    color: #43a047; /* --green-success */
+}
+
+.pending-status {
+    background-color: #fff8e1;
+    color: #ffb300; /* --yellow-pending */
+}
+
+/* === 4. Payment Button === */
+.pay-button-integrated {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    background-color: #1976d2; /* --blue-primary */
+    color: white;
+    box-shadow: 0 4px 10px rgba(25, 118, 210, 0.4);
+}
+
+.pay-button-integrated:hover:not(:disabled) {
+    background-color: #1565c0;
+    box-shadow: 0 6px 12px rgba(25, 118, 210, 0.5);
+}
+
+.pay-button-disabled {
+    background-color: #43a047 !important; /* --green-success */
+    cursor: not-allowed;
+    opacity: 1;
+    box-shadow: none;
+}
+
+.payment-note {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #43a047; /* --green-success */
+}
+
+/* === 5. Status Messages === */
+.status-message-hostel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    width: 100%;
+}
+.status-message-hostel .icon { 
+    font-size: 1.2rem; 
+    line-height: 1;
+}
+
+.status-message-hostel.success { background-color: #e8f5e9; color: #43a047; }
+.status-message-hostel.error { background-color: #ffebee; color: #e53935; }
+.status-message-hostel.info { background-color: #e3f2fd; color: #1976d2; }
+
+/* Spinner animation */
+.status-message-hostel.info .icon {
+    animation: spin 1s linear infinite;
+}
+@keyframes spin { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .details-card-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

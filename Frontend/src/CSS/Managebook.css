@@ -1,0 +1,283 @@
+
+.manage-book-container {
+    padding: 30px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 3px solid #3498db;
+}
+
+.main-heading {
+    font-size: 2.2em;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.sub-heading {
+    font-size: 1em;
+    color: #7f8c8d;
+}
+
+.status-box {
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.status-loading {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border-left: 5px solid #2980b9;
+}
+
+.status-error {
+    background-color: #fceceb;
+    color: #c0392b;
+    border-left: 5px solid #e74c3c;
+}
+
+.status-info {
+    background-color: #e8f5e9;
+    color: #27ae60;
+    border-left: 5px solid #2ecc71;
+}
+
+.data-panel {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.panel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.record-summary {
+    font-size: 1.1em;
+    color: #34495e;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.institutional-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.institutional-table thead tr {
+    background-color: #3498db;
+    color: white;
+}
+
+.institutional-table th, .institutional-table td {
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.institutional-table th {
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+
+.institutional-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.overdue-row {
+    background-color: #fef0f0 !important;
+}
+
+.overdue-row:hover {
+    background-color: #fcdbdc !important;
+}
+
+.overdue-days {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.overdue-label {
+    display: block;
+    font-size: 0.8em;
+    color: white;
+    background-color: #e74c3c;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-top: 5px;
+    width: fit-content;
+}
+
+.book-image-cell {
+    width: 80px;
+}
+
+.book-cover-placeholder {
+    width: 60px;
+    height: 90px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+    color: #666;
+}
+
+.book-cover-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-title-cell {
+    min-width: 250px;
+}
+
+.book-title-text {
+    font-size: 1.1em;
+    color: #34495e;
+    display: block;
+}
+
+.book-author-text {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin: 2px 0;
+}
+
+.book-id-text {
+    font-size: 0.8em;
+    color: #bdc3c7;
+}
+
+.days-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+    color: #34495e;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.overdue-row .days-tag {
+    background-color: #f39c12;
+    color: white;
+}
+
+
+.action-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.primary-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.primary-btn:hover:not(:disabled) {
+    background-color: #27ae60;
+}
+
+.secondary-btn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background-color: #7f8c8d;
+}
+
+.action-btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+    .institutional-table, .institutional-table tbody, .institutional-table tr, .institutional-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .institutional-table thead {
+        display: none;
+    }
+
+    .institutional-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .institutional-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+
+    .institutional-table td:last-child {
+        border-bottom: 0;
+    }
+
+    .institutional-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+        color: #34495e;
+    }
+
+    .book-image-cell {
+        display: none;
+    }
+    
+    .panel-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

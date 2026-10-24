@@ -1,0 +1,191 @@
+.quiz-feed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #F8F9FA; 
+    font-family: 'Roboto', Arial, sans-serif;
+    padding: 30px 15px;
+}
+
+.feed-header {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    color: #343A40;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #E9ECEF;
+}
+
+.feed-header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.header-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #007BFF; 
+}
+
+.quiz-feed-list {
+    width: 100%;
+    max-width: 900px; 
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-feed-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #EEEEEE;
+    cursor: default;
+    transition: background-color 0.2s;
+}
+
+.quiz-feed-item:last-child {
+    border-bottom: none;
+}
+
+.quiz-feed-item:hover {
+    background-color: #F7F7F7;
+}
+
+.feed-icon-container {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.feed-content-area {
+    flex-grow: 1;
+    padding-right: 20px;
+}
+
+.feed-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.feed-description {
+    font-size: 0.9rem;
+    color: #6C757D;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.feed-actions-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.action-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.start-button {
+    background-color: #007BFF;
+    color: white;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+.result-button {
+    background-color: #E9ECEF;
+    color: #495057;
+    border: 1px solid #CED4DA;
+}
+
+.result-button:hover {
+    background-color: #CED4DA;
+}
+
+.status-message {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.loading-state {
+    background-color: #E3F2FD;
+    color: #1565C0;
+}
+
+.error-state {
+    background-color: #FFCDD2;
+    color: #C62828;
+}
+
+.no-data-state {
+    background-color: #FFF9C4;
+    color: #FBC02D;
+    border: 1px solid #FFEB3B;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .feed-header h1 {
+        font-size: 1.5rem;
+    }
+    .quiz-feed-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+    .feed-icon-container {
+        margin-bottom: 5px;
+    }
+    .feed-content-area {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+    .feed-actions-area {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .action-button {
+        flex: 1;
+        justify-content: center;
+    }
+}

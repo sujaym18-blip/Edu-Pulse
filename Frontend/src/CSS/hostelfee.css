@@ -1,0 +1,326 @@
+.hostel-portal-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.hostel-portal-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 3px solid #007bff;
+}
+
+.hostel-portal-header .header-icon {
+    font-size: 40px;
+    color: #1f3a5f;
+    margin-bottom: 10px;
+}
+
+.hostel-portal-header h1 {
+    color: #1f3a5f;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.hostel-portal-header p {
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+.details-card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .details-card-wrapper {
+        grid-template-columns: 1.5fr 1fr; 
+    }
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+}
+
+.card-header-hostel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.card-header-hostel .card-icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.card-header-hostel h2 {
+    color: #1f3a5f;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dotted #e9ecef;
+    align-items: center;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: #1f3a5f;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.detail-label svg {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.detail-value {
+    color: #343a40;
+    font-size: 1.1em;
+}
+
+.room-type-value {
+    background-color: #e6f7ff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #1f3a5f;
+    font-weight: 700;
+}
+
+.amenities-heading {
+    color: #1f3a5f;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+.amenities-heading svg {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.amenities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.amenity-tag {
+    background-color: #f0f8ff;
+    color: #007bff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    border: 1px solid #b3d9ff;
+}
+
+.no-amenities {
+    color: #6c757d;
+    font-style: italic;
+    padding: 5px;
+}
+
+.fee-payment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fee-total-display {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.fee-total-display .label {
+    display: block;
+    color: #6c757d;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.fee-total-display .amount-value {
+    display: block;
+    color: #1f3a5f;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+.fee-status-bar {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.fee-status-bar.paid-status {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.fee-status-bar.pending-status {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.fee-status-bar .status-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.pay-button-integrated {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+.pay-button-integrated:not(.pay-button-disabled):hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.pay-button-integrated.pay-button-disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.pay-button-integrated svg {
+    margin-right: 10px;
+}
+
+.status-message-hostel {
+    width: 100%;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.status-message-hostel p {
+    margin: 0;
+    font-size: 0.95em;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.status-message-hostel .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.status-message-hostel.success {
+    background-color: #d4edda;
+    color: #28a745;
+    border: 1px solid #c3e6cb;
+}
+.status-message-hostel.error {
+    background-color: #f8d7da;
+    color: #dc3545;
+    border: 1px solid #f5c6cb;
+}
+.status-message-hostel.info {
+    background-color: #d1ecf1;
+    color: #17a2b8;
+    border: 1px solid #bee5eb;
+}
+
+.state-message {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #1f3a5f;
+}
+
+.state-message .state-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.loading-state .spin {
+    animation: spin 1s linear infinite;
+    color: #007bff;
+}
+
+.error-state {
+    color: #dc3545;
+}
+.error-state .state-icon {
+    color: #dc3545;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.payment-note {
+    font-size: 0.9em;
+    margin-top: 15px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+}
+.payment-note.success-note {
+    color: #28a745;
+    background-color: #eaf7ed;
+}
+.payment-note.info-note {
+    color: #1f3a5f;
+    background-color: #f0f8ff;
+}

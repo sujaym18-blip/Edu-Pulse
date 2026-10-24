@@ -1,0 +1,187 @@
+.report-card-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.report-card-header {
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header-icon {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.report-title {
+    font-size: 2.5em;
+    color: #1a2a4b;
+    font-weight: 800;
+    margin: 0 0 5px 0;
+}
+
+.welcome-message {
+    font-size: 1.2em;
+    color: #5a6270;
+    font-weight: 600;
+}
+
+.instruction-text {
+    text-align: center;
+    font-size: 1.1em;
+    color: #6c757d;
+    margin-bottom: 40px;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+}
+
+.report-item-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    border-radius: 12px;
+    background: #f7f9fc;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.report-item-card:hover {
+    background: #e9f5ff;
+    border-color: #007bff;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.card-icon-area {
+    font-size: 2.8em;
+    color: #007bff;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.card-content-area {
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #1a2a4b;
+    margin: 0 0 5px 0;
+}
+
+.card-description {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+.card-action-link {
+    font-size: 0.95em;
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.report-item-card:hover .card-action-link {
+    color: #0056b3;
+}
+
+.state-loading, .state-unauthorized {
+    text-align: center;
+    padding: 60px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.state-loading {
+    background-color: #f0f7ff;
+    color: #007bff;
+}
+
+.state-unauthorized {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.state-loading .status-icon {
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.login-redirect-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.login-redirect-button:hover {
+    background-color: #0056b3;
+}
+
+.login-redirect-button svg {
+    margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .report-card-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .report-title {
+        font-size: 2em;
+    }
+    
+    .report-item-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .card-icon-area {
+        margin: 0 0 15px 0;
+    }
+}

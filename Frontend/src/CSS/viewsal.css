@@ -1,0 +1,210 @@
+
+.admin-page__containert {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f9fc; 
+    min-height: 100vh;
+}
+
+.admin-page__headert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.admin-page__titlet {
+    color: #1a73e8; 
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.admin-page__icont {
+    margin-right: 12px;
+    color: #1a73e8;
+}
+
+.admin-page__button--primaryt {
+    background-color: #00b894; 
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-page__button--primaryt:hover {
+    background-color: #00a082;
+    transform: translateY(-1px);
+}
+
+.message__bart {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.message__bar--loadingt {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border: 1px solid #c4dafc;
+}
+
+.message__bar--errort {
+    background-color: #fce8e6;
+    color: #d93025;
+    border: 1px solid #f9c7c2;
+}
+
+.message__bar--empty-listt {
+    text-align: center;
+    padding: 60px;
+    font-size: 1.2rem;
+    color: #5f6368;
+    background-color: #fff;
+    border: 1px dashed #dadce0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.salary-table__wrapert {
+    margin-top: 20px;
+}
+
+.salary-table__infot {
+    font-size: 0.9rem;
+    color: #5f6368;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 5px;
+}
+
+.table__responsive-areat {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.salary__table--styledt {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 1100px; 
+}
+
+.salary__table--styledt thead {
+    background-color: #f1f3f4;
+}
+
+.salary__table--styledt th {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    color: #5f6368;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-bottom: 2px solid #dadce0;
+}
+
+.salary__table--styledt td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e8e8e8;
+    color: #3c4043;
+    font-size: 0.95rem;
+}
+
+.salary__table--styledt tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.salary__table--styledt tbody tr:hover {
+    background-color: #f6f8f9;
+}
+
+.data__employeet, .data__departmentt {
+    font-weight: 500;
+}
+
+.header__salaryt, .header__allowancet, .header__deductiont, .header__nett {
+    text-align: right;
+}
+
+.data__amountt {
+    font-family: 'Roboto Mono', monospace; 
+    font-weight: 500;
+    text-align: right;
+}
+
+.data__amount--nett {
+    font-weight: 700;
+    color: #1a73e8; 
+    background-color: #eaf1fb;
+    border-radius: 4px;
+}
+
+.data__amount--deductiont {
+    color: #d93025; 
+}
+
+.header__actionst {
+    text-align: center;
+}
+
+.data__actionst {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.data__actionst button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action__button--updatet {
+    background-color: #b5d36e; 
+    color: #3c4043;
+}
+
+.action__button--updatet:hover {
+    background-color: #b5d36e;
+}
+
+.action__button--deletet {
+    background-color: #d93025; 
+}
+
+.action__button--deletet:hover {
+    background-color: #b31412;
+}

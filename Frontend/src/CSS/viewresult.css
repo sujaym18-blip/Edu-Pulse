@@ -1,0 +1,229 @@
+.result-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f6f8;
+    font-family: 'Roboto', Arial, sans-serif;
+    padding: 30px 15px;
+}
+
+.result-header {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    color: #343A40;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #007BFF;
+}
+
+.result-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    color: #007BFF;
+}
+
+.score-summary {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.score-summary-pass {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A); 
+}
+
+.score-summary-fail {
+    background: linear-gradient(135deg, #FF9800, #FFB74D); 
+}
+
+.trophy-icon {
+    font-size: 3.5rem;
+    margin-right: 20px;
+}
+
+.score-details {
+    flex-grow: 1;
+}
+
+.summary-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.main-score {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 5px 0;
+}
+
+.percentage-score {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.details-section-header {
+    width: 100%;
+    max-width: 800px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #E9ECEF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.question-details-list {
+    width: 100%;
+    max-width: 800px;
+}
+
+.question-detail-card {
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border-left: 5px solid transparent; 
+}
+
+.status-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.correct-card {
+    border-left-color: #4CAF50;
+}
+.incorrect-card {
+    border-left-color: #F44336;
+}
+
+.correct-card .status-tag {
+    background-color: #4CAF50; 
+}
+.incorrect-card .status-tag {
+    background-color: #F44336; 
+}
+
+.question-text {
+    font-size: 1rem;
+    color: #333;
+    margin: 0 0 15px 0;
+    padding-right: 80px; }
+
+.answer-section p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.answer-section strong {
+    color: #495057;
+    font-weight: 600;
+}
+
+.correct-answer span {
+    color: #388E3C; 
+    font-weight: 500;
+}
+
+.student-answer span.is-correct {
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+.student-answer span.is-incorrect {
+    color: #F44336; 
+    font-weight: 700;
+}
+
+.status-message {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.loading-state {
+    background-color: #E3F2FD;
+    color: #1565C0;
+}
+
+.error-state {
+    background-color: #FFCDD2;
+    color: #C62828;
+}
+
+.no-data-state {
+    background-color: #FFF9C4;
+    color: #FBC02D;
+    border: 1px solid #FFEB3B;
+}
+
+.no-detail-state {
+    background-color: #E0E0E0;
+    color: #757575;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .result-header h1 {
+        font-size: 1.5rem;
+    }
+    .trophy-icon {
+        font-size: 2.5rem;
+    }
+    .main-score {
+        font-size: 2rem;
+    }
+    .percentage-score {
+        font-size: 1rem;
+    }
+}

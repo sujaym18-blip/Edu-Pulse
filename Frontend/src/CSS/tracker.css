@@ -1,0 +1,154 @@
+.tracker-container {
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    min-height: 100vh;
+}
+
+.tracker-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tracker-header h1 {
+    color: #1a4d7d;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.header-icon {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.status-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.status-bar.info {
+    background-color: #e6f7ff;
+    color: #007bff;
+    border: 1px solid #91d5ff;
+}
+
+.status-bar.success {
+    background-color: #f6ffed;
+    color: #52c41a;
+    border: 1px solid #b7eb8f;
+}
+
+.status-bar.error {
+    background-color: #fff1f0;
+    color: #ff4d4f;
+    border: 1px solid #ffa39e;
+}
+
+.map-wrapper {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 3px solid #ffffff;
+}
+
+.leaflet-map-host {
+    height: 65vh; 
+    min-height: 550px;
+    width: 100%;
+}
+
+.popup-content h3 {
+    margin: 0 0 5px 0;
+    color: #1a4d7d;
+    font-size: 1.1rem;
+}
+
+.popup-content p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.location-info-footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.coordinate-box {
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    min-width: 200px;
+    transition: transform 0.2s;
+}
+
+.coordinate-box:hover {
+    transform: translateY(-3px);
+}
+
+.lat-box {
+    border: 1px solid #91d5ff;
+    background-color: #e6f7ff;
+    color: #007bff;
+}
+
+.lng-box {
+    border: 1px solid #b7eb8f;
+    background-color: #f6ffed;
+    color: #52c41a;
+}
+
+.coordinate-box .label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.coordinate-box strong {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.spin {
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .tracker-header h1 {
+        font-size: 2rem;
+    }
+    .coordinate-box {
+        min-width: unset;
+        padding: 10px 15px;
+    }
+    .location-info-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .leaflet-map-host {
+        height: 60vh;
+        min-height: 400px;
+    }
+}

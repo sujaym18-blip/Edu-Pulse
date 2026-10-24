@@ -1,0 +1,302 @@
+.admin-profile-page {
+    box-sizing: border-box;
+    display: flex;
+    min-height: calc(100vh - 64px);
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(24px, 6vw, 72px) 20px;
+    background: #f3f6fb;
+    color: #1d2939;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.admin-profile-page *,
+.admin-profile-page *::before,
+.admin-profile-page *::after {
+    box-sizing: inherit;
+}
+
+.admin-profile-card {
+    width: min(100%, 760px);
+    overflow: hidden;
+    border: 1px solid #e4e7ec;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 16px 44px rgba(16, 24, 40, 0.1);
+}
+
+.admin-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 32px 30px;
+    background: linear-gradient(145deg, #f5f8ff 0%, #fff 72%);
+    text-align: center;
+}
+
+.admin-profile-avatar {
+    position: relative;
+    display: grid;
+    width: 124px;
+    height: 124px;
+    place-items: center;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    background: #eaf1ff;
+    box-shadow: 0 5px 18px rgba(16, 24, 40, 0.15);
+    color: #1677f9;
+    font-size: 112px;
+}
+
+.admin-profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.admin-profile-camera {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #1677f9;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.admin-profile-camera:hover {
+    background: #095ecb;
+}
+
+.admin-profile-header h1 {
+    max-width: 100%;
+    margin: 0;
+    color: #1d2939;
+    font-size: clamp(1.45rem, 3vw, 1.9rem);
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.admin-profile-header > p {
+    margin: 7px 0 0;
+    color: #667085;
+    font-size: 1rem;
+}
+
+.admin-profile-upload {
+    display: flex;
+    width: min(100%, 440px);
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 8px;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.admin-profile-upload input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.admin-profile-selected-file {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    color: #667085;
+    font-size: 0.8rem;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.admin-profile-upload button {
+    display: inline-flex;
+    min-height: 38px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 7px;
+    background: #1677f9;
+    color: #fff;
+    font: inherit;
+    font-size: 0.86rem;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.admin-profile-upload .admin-profile-choose-button {
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    color: #344054;
+}
+
+.admin-profile-upload .admin-profile-choose-button:hover {
+    border-color: #1677f9;
+    background: #f5f8ff;
+    color: #095ecb;
+}
+
+.admin-profile-upload .admin-profile-save-button:hover:not(:disabled) {
+    background: #095ecb;
+}
+
+.admin-profile-upload .admin-profile-save-button:disabled {
+    background: #98a2b3;
+    cursor: not-allowed;
+}
+
+.admin-profile-notice {
+    margin: 0 32px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.admin-profile-notice.success {
+    border: 1px solid #abefc6;
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.admin-profile-notice.error,
+.admin-profile-state.admin-profile-error {
+    border: 1px solid #fecdca;
+    background: #fef3f2;
+    color: #b42318;
+}
+
+.admin-profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 28px 32px 34px;
+}
+
+.admin-profile-detail {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: 24px minmax(88px, 0.7fr) minmax(0, 1.3fr);
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    border: 1px solid #eaecf0;
+    border-radius: 10px;
+    background: #fcfcfd;
+}
+
+.admin-profile-detail > svg {
+    color: #1677f9;
+}
+
+.admin-profile-detail > span {
+    color: #667085;
+    font-size: 0.88rem;
+}
+
+.admin-profile-detail > strong {
+    min-width: 0;
+    color: #344054;
+    font-size: 0.92rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.admin-profile-state {
+    display: flex;
+    min-height: 180px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    border: 1px solid #e4e7ec;
+    border-radius: 14px;
+    background: #fff;
+    color: #475467;
+}
+
+.admin-profile-state p {
+    margin: 0;
+}
+
+.admin-profile-state.admin-profile-error {
+    flex-direction: column;
+    text-align: center;
+}
+
+.admin-profile-state.admin-profile-error button {
+    min-height: 38px;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 7px;
+    background: #b42318;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.admin-profile-spinner {
+    animation: admin-profile-spin 1s linear infinite;
+}
+
+@keyframes admin-profile-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .admin-profile-page {
+        min-height: calc(100vh - 56px);
+        padding: 20px 12px;
+    }
+
+    .admin-profile-header {
+        padding: 30px 18px 24px;
+    }
+
+    .admin-profile-avatar {
+        width: 108px;
+        height: 108px;
+        font-size: 96px;
+    }
+
+    .admin-profile-upload {
+        gap: 7px;
+    }
+
+    .admin-profile-upload button {
+        padding: 8px 10px;
+    }
+
+    .admin-profile-notice {
+        margin: 0 18px;
+    }
+
+    .admin-profile-details {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+        padding: 20px 18px 24px;
+    }
+
+    .admin-profile-detail {
+        grid-template-columns: 24px minmax(82px, 0.5fr) minmax(0, 1.5fr);
+        padding: 13px;
+    }
+}

@@ -1,0 +1,200 @@
+.salary-page__containers {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background-color: #f4f6f9;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.salary-card__wraps {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+.salary-card__headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.salary-card__titles {
+    font-size: 1.8rem;
+    color: #1e40af; 
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.title__icons {
+    margin-right: 12px;
+    color: #3b82f6;
+}
+
+.header__back-buttons {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.header__back-buttons:hover {
+    background-color: #e2e8f0;
+    color: #1e40af;
+}
+
+.salary-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-sections {
+    display: grid;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.form-section--selectors {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-section--finances {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.form-section--final {
+    grid-template-columns: 2fr 3fr;
+    align-items: flex-end;
+    background-color: #eef2ff;
+    border: 1px solid #c7d2fe;
+}
+
+.form-groups {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-labels {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-inputs {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    background-color: white;
+}
+
+.form-inputs:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+.form-inputs:disabled {
+    background-color: #f1f5f9;
+    cursor: not-allowed;
+}
+.net-salary__displays {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    background-color: #10b981; 
+    color: white;
+    border-radius: 6px;
+    text-align: right;
+    height: 100%;
+    justify-content: center;
+}
+
+.net-salary__labell {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.net-salary__values {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.form-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-button__submits {
+    background-color: #1e40af; 
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    max-width: 400px;
+    transition: background-color 0.3s, opacity 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-button__submits:hover:not(:disabled) {
+    background-color: #1e3a8a;
+}
+
+.form-button__submits:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+.message__bars {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.message__bar--success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.message__bar--error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+}
+
+.message__bar--loading {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    border: 1px solid #93c5fd;
+}

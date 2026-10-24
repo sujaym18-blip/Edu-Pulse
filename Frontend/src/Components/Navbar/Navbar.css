@@ -1,0 +1,44 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 120px;
+    color: white;
+
+}
+
+.nav-logo{
+    font-family: Outfit;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+    gap: 60px;
+}
+
+.nav-menu li {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.nav-menu li:hover {
+    opacity: 0.85;
+}
+
+.nav-contact{
+    border-radius: 50px;
+    padding: 10px 32px;
+    background: #007bff;
+    color: #fff !important;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-contact:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}

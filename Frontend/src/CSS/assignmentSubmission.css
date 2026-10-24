@@ -1,0 +1,192 @@
+
+.submission-page-wrapper {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.submission-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6; 
+}
+
+.submission-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #007bff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.submission-title svg {
+    margin-right: 10px;
+}
+
+.submission-subtitle {
+    color: #6c757d; 
+}
+
+
+.student-info-card {
+    background-color: #e6f2ff; 
+    border: 1px solid #dee2e6; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.student-info-card h3 {
+    color: #343a40; 
+    margin-top: 0;
+    border-bottom: 1px dashed #007bff; 
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.student-info-card p {
+    margin: 8px 0;
+    font-size: 0.95em;
+    color: #343a40; 
+    display: flex;
+    align-items: center;
+}
+
+.student-info-card p svg {
+    margin-right: 10px;
+    color: #007bff; 
+}
+
+.student-info-card span {
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.submission-form {
+    background-color: #ffffff; 
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload-field {
+    margin-bottom: 20px;
+}
+
+.file-upload-field label {
+    display: block;
+    font-weight: 600;
+    color: #343a40; 
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.file-upload-field label svg {
+    margin-right: 8px;
+    color: #dc3545; 
+}
+
+.file-upload-field input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed #dee2e6; 
+    border-radius: 6px;
+    background-color: #f8f9fa; 
+    cursor: pointer;
+}
+
+.uploaded-file-name {
+    font-size: 0.9em;
+    color: #6c757d; 
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; 
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.submit-btn:disabled {
+    background-color: #dee2e6; 
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.submit-btn svg {
+    margin-right: 10px;
+}
+
+.status-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.status-message .icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.success-box {
+    background-color: #d4edda;
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.error-box {
+    background-color: #f8d7da;
+    color: #dc3545; 
+    border: 1px solid #dc3545;
+}
+
+.loading-box {
+    background-color: #e6f2ff; 
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media (max-width: 600px) {
+    .submission-page-wrapper {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+    .submission-title {
+        font-size: 1.5em;
+    }
+}

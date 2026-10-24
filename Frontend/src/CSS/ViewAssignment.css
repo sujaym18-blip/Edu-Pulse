@@ -1,0 +1,249 @@
+
+.assignment-view-wrapper {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.view-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.view-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #0d47a1;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-title svg {
+    margin-right: 10px;
+}
+
+.view-subtitle {
+    color: #607d8b;
+    font-size: 1em;
+}
+
+.assignment-list-container {
+    overflow-x: auto;
+}
+
+.assignment-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.assignment-table th, .assignment-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.assignment-table th {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.assignment-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.assignment-table tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+.title-details {
+    max-width: 400px;
+}
+
+.title-text {
+    font-weight: 600;
+    color: #263238;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.description-text {
+    font-size: 0.9em;
+    color: #607d8b;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.id-text {
+    font-size: 0.75em;
+    color: #e0e0e0;
+    margin-top: 5px;
+}
+
+.date-col {
+    width: 120px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    color: #263238;
+}
+
+.date-col svg {
+    margin-right: 5px;
+}
+
+
+.pdf-link {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.pdf-link:hover {
+    color: #b71c1c; 
+    text-decoration: underline;
+}
+
+.pdf-link svg {
+    margin-right: 5px;
+}
+
+.submit-button {
+    padding: 8px 15px;
+    background-color: #0d47a1;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.submit-button:hover {
+    background-color: #0b3b89;
+}
+
+.submit-button svg {
+    margin-right: 5px;
+}
+
+.state-message {
+    text-align: center;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.state-message .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.state-message.error {
+    background-color: #ffebee; 
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+}
+
+.state-message.loading {
+    color: #0d47a1;
+}
+
+.state-message.no-data {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    border: 1px solid #0d47a1;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .assignment-view-wrapper {
+        margin: 20px 10px;
+        padding: 10px;
+    }
+
+    .assignment-table thead {
+        display: none;
+    }
+
+    .assignment-table tbody, .assignment-table tr, .assignment-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .assignment-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .assignment-table td {
+        text-align: right;
+        padding: 10px 15px;
+        position: relative;
+        border-bottom: 1px dotted #e0e0e0;
+    }
+
+    .assignment-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: 600;
+        color: #263238;
+    }
+
+    .title-details::before { content: "Assignment:"; }
+    tr td:nth-child(2)::before { content: "Issued:"; }
+    tr td:nth-child(3)::before { content: "Due:"; }
+    tr td:nth-child(4)::before { content: "Document:"; }
+    tr td:nth-child(5)::before { content: "Action:"; }
+
+    .title-details {
+        text-align: left;
+    }
+
+    .title-text {
+        margin-top: 10px;
+        font-size: 1.1em;
+    }
+
+    .description-text, .id-text {
+        text-align: left;
+    }
+    
+    .submit-button {
+        justify-content: flex-end;
+    }
+}

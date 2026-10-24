@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Poppins, sans-serif;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  main,
+  section,
+  article,
+  form,
+  [class*="container"],
+  [class*="wrapper"] {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .MuiContainer-root {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+
+  .MuiPaper-root {
+    max-width: 100%;
+  }
+
+  .MuiTableContainer-root {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .MuiTable-root {
+    min-width: 600px;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    overflow-wrap: anywhere;
+  }
+}

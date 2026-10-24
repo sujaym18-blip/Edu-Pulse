@@ -1,0 +1,1096 @@
+/* ==========================================================================
+   EduPulse ERP - Modern Register Page Stylesheet (Clean, Bulletproof, Zero-Conflict)
+   ========================================================================== */
+
+:root {
+  --ep-navy-950: #0a0f1d;
+  --ep-navy-900: #0f172a;
+  --ep-navy-800: #1e293b;
+  --ep-navy-700: #334155;
+  --ep-blue-500: #3b82f6;
+  --ep-blue-600: #2563eb;
+  --ep-blue-700: #1d4ed8;
+  --ep-indigo-500: #6366f1;
+  --ep-emerald-500: #10b981;
+  --ep-emerald-600: #059669;
+  --ep-rose-500: #f43f5e;
+  --ep-rose-600: #e11d48;
+  --ep-text-main: #0f172a;
+  --ep-text-muted: #64748b;
+  --ep-border: #cbd5e1;
+  --ep-border-focus: #2563eb;
+  --ep-radius-md: 14px;
+  --ep-radius-lg: 20px;
+  --ep-radius-xl: 28px;
+}
+
+/* Page Outer Wrapper */
+.ep-register-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0b1120 0%, #0f172a 45%, #131d33 100%);
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Outfit', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 32px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ambient Glow Orbs - Explicitly set to -1 z-index and pointer-events: none */
+.ep-ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none !important;
+  z-index: 0 !important;
+  opacity: 0.55;
+}
+
+.ep-glow-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(99, 102, 241, 0.15) 70%, transparent 100%);
+  top: -100px;
+  left: -100px;
+}
+
+.ep-glow-2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, rgba(14, 165, 233, 0.1) 70%, transparent 100%);
+  bottom: -150px;
+  right: -150px;
+}
+
+.ep-glow-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(244, 63, 94, 0.15) 0%, transparent 70%);
+  top: 40%;
+  left: 45%;
+}
+
+/* Container Structure */
+.ep-register-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Top Navigation Bar */
+.ep-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+}
+
+.ep-brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.ep-brand-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.ep-brand-text h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.ep-brand-text span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.ep-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.ep-back-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  transform: translateX(-3px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Main Split Card */
+.ep-main-card {
+  background: #ffffff;
+  border-radius: var(--ep-radius-xl);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+/* -------------------- LEFT SHOWCASE PANEL -------------------- */
+.ep-showcase-panel {
+  flex: 0 0 42%;
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+  padding: 44px 36px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.ep-showcase-decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.6;
+  pointer-events: none !important;
+}
+
+.ep-showcase-header {
+  position: relative;
+  z-index: 2;
+}
+
+.ep-role-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.ep-pill-student {
+  background: rgba(59, 130, 246, 0.18);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.ep-pill-staff {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.ep-pill-admin {
+  background: rgba(244, 63, 94, 0.18);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.35);
+}
+
+.ep-showcase-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.ep-showcase-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 28px;
+}
+
+/* Feature List */
+.ep-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.ep-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ep-feature-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ep-icon-student {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}
+
+.ep-icon-staff {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.ep-icon-admin {
+  background: rgba(244, 63, 94, 0.2);
+  color: #fb7185;
+}
+
+.ep-feature-text h4 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 2px 0;
+}
+
+.ep-feature-text p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Dynamic Interactive Role Mockup Card */
+.ep-mockup-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--ep-radius-md);
+  padding: 18px 20px;
+  margin-top: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ep-mockup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ep-mockup-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #cbd5e1;
+}
+
+.ep-mockup-body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ep-mockup-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.ep-mockup-info h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 3px 0;
+}
+
+.ep-mockup-info p {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.ep-showcase-footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.ep-trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* -------------------- RIGHT FORM PANEL -------------------- */
+.ep-form-panel {
+  flex: 1;
+  padding: 44px 44px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 92vh;
+  position: relative;
+  z-index: 15;
+}
+
+/* Form Header */
+.ep-form-header {
+  margin-bottom: 24px;
+}
+
+.ep-form-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.ep-login-redirect-link {
+  font-size: 0.88rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.ep-login-redirect-link a {
+  color: var(--ep-blue-600);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ep-login-redirect-link a:hover {
+  color: var(--ep-blue-700);
+  text-decoration: underline;
+}
+
+.ep-form-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--ep-navy-900);
+  letter-spacing: -0.5px;
+  margin: 0 0 6px 0;
+}
+
+.ep-form-subtitle {
+  font-size: 0.92rem;
+  color: var(--ep-text-muted);
+  margin: 0;
+}
+
+/* Role Selector Grid Cards */
+.ep-role-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.ep-role-card {
+  border: 2px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: var(--ep-radius-md);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  outline: none;
+  user-select: none;
+}
+
+.ep-role-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  background: #f1f5f9;
+}
+
+.ep-role-card.active-student {
+  border-color: var(--ep-blue-500);
+  background: #eff6ff;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+}
+
+.ep-role-card.active-staff {
+  border-color: var(--ep-emerald-500);
+  background: #ecfdf5;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
+}
+
+.ep-role-card.active-admin {
+  border-color: var(--ep-rose-500);
+  background: #fff1f2;
+  box-shadow: 0 4px 16px rgba(244, 63, 94, 0.15);
+}
+
+.ep-role-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  transition: transform 0.25s ease;
+}
+
+.ep-role-student-icon {
+  background: #dbeafe;
+  color: var(--ep-blue-600);
+}
+
+.ep-role-staff-icon {
+  background: #d1fae5;
+  color: var(--ep-emerald-600);
+}
+
+.ep-role-admin-icon {
+  background: #ffe4e6;
+  color: var(--ep-rose-600);
+}
+
+.ep-role-card-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ep-navy-900);
+  margin-bottom: 2px;
+}
+
+.ep-role-card-desc {
+  font-size: 0.73rem;
+  color: var(--ep-text-muted);
+  line-height: 1.25;
+}
+
+.ep-role-active-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.ep-role-card.active-student .ep-role-active-indicator {
+  background: var(--ep-blue-500);
+  box-shadow: 0 0 8px var(--ep-blue-500);
+}
+
+.ep-role-card.active-staff .ep-role-active-indicator {
+  background: var(--ep-emerald-500);
+  box-shadow: 0 0 8px var(--ep-emerald-500);
+}
+
+.ep-role-card.active-admin .ep-role-active-indicator {
+  background: var(--ep-rose-500);
+  box-shadow: 0 0 8px var(--ep-rose-500);
+}
+
+/* Alert Notification Banner */
+.ep-alert-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--ep-radius-md);
+  margin-bottom: 22px;
+  font-size: 0.9rem;
+}
+
+.ep-alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.ep-alert-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+/* Section Header Separator */
+.ep-form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 24px 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ep-section-step {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: var(--ep-navy-700);
+  text-transform: uppercase;
+}
+
+.ep-form-section-title h3 {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--ep-navy-800);
+  margin: 0;
+}
+
+/* ==============================================================
+   STANDALONE FORM GRID & BULLETPROOF INPUT SYSTEM
+   Works 100% reliably regardless of Bootstrap or third-party CSS
+   ============================================================== */
+.ep-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.ep-col-full {
+  grid-column: span 2;
+}
+
+.ep-col-half {
+  grid-column: span 1;
+}
+
+.ep-form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ep-form-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ep-required {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* Input Container Box */
+.ep-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 12px;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ep-input-box:focus-within {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Icon anchored on the left */
+.ep-input-icon {
+  position: absolute;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  pointer-events: none !important;
+  z-index: 3;
+}
+
+/* The actual text/password/date input */
+.ep-input-control {
+  width: 100%;
+  height: 46px;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  padding: 10px 14px 10px 42px !important;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #0f172a !important;
+  border-radius: 12px;
+  box-sizing: border-box;
+  pointer-events: auto !important;
+  user-select: text !important;
+  position: relative;
+  z-index: 2;
+}
+
+.ep-input-control::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+/* Input with action button on right (e.g. Eye icon) */
+.ep-input-control.has-action {
+  padding-right: 44px !important;
+}
+
+/* Eye Toggle Button */
+.ep-input-eye-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  border-radius: 6px;
+  transition: color 0.15s ease;
+}
+
+.ep-input-eye-btn:hover {
+  color: #1e293b;
+}
+
+/* Custom Select Dropdown */
+.ep-select-control {
+  width: 100%;
+  height: 46px;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  padding: 10px 14px 10px 42px !important;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #0f172a !important;
+  border-radius: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Password Strength Indicator */
+.ep-password-meter {
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+
+.ep-meter-bar {
+  height: 4px;
+  border-radius: 3px;
+  background: #e2e8f0;
+  overflow: hidden;
+  position: relative;
+}
+
+.ep-meter-fill {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.ep-meter-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+/* Campus Amenities Selectable Cards (For Student) */
+.ep-facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.ep-facility-card {
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: var(--ep-radius-md);
+  padding: 14px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.ep-facility-card:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.ep-facility-card.selected {
+  border-color: var(--ep-blue-500);
+  background: #eff6ff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+}
+
+.ep-facility-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.ep-facility-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ep-navy-700);
+}
+
+.ep-facility-card.selected .ep-facility-icon-circle {
+  background: var(--ep-blue-500);
+  color: #ffffff;
+}
+
+.ep-facility-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ep-navy-900);
+  margin-bottom: 2px;
+}
+
+.ep-facility-fee {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ep-blue-600);
+}
+
+/* Dynamic Live Fee Calculator Card */
+.ep-fee-calculator-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+  border: 1.5px dashed #cbd5e1;
+  border-radius: var(--ep-radius-md);
+  padding: 16px 20px;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ep-fee-details h5 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ep-navy-900);
+  margin: 0 0 2px 0;
+}
+
+.ep-fee-details p {
+  font-size: 0.76rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.ep-total-fee-badge {
+  text-align: right;
+}
+
+.ep-total-fee-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ep-total-fee-amount {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--ep-blue-600);
+  line-height: 1.2;
+}
+
+/* Staff Image Upload Zone */
+.ep-upload-zone {
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--ep-radius-md);
+  padding: 16px 20px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.ep-upload-zone:hover {
+  border-color: var(--ep-emerald-500);
+  background: #f0fdf4;
+}
+
+.ep-upload-avatar-preview {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+}
+
+.ep-upload-info h5 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ep-navy-900);
+  margin: 0 0 2px 0;
+}
+
+.ep-upload-info p {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Checkbox Row */
+.ep-terms-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.ep-terms-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+.ep-terms-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+/* Primary Form Action Button */
+.ep-submit-btn {
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: var(--ep-radius-md);
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  margin-top: 24px;
+}
+
+.ep-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.ep-btn-student {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.ep-btn-student:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.45);
+  transform: translateY(-2px);
+}
+
+.ep-btn-staff {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+}
+
+.ep-btn-staff:hover:not(:disabled) {
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.45);
+  transform: translateY(-2px);
+}
+
+.ep-btn-admin {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
+}
+
+.ep-btn-admin:hover:not(:disabled) {
+  background: linear-gradient(135deg, #be123c 0%, #9f1239 100%);
+  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Footer Switch Links */
+.ep-form-footer-links {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.ep-quick-portal-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.ep-portal-link {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.ep-portal-link:hover {
+  color: var(--ep-blue-600);
+}
+
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+@media (max-width: 1024px) {
+  .ep-main-card {
+    flex-direction: column;
+  }
+  
+  .ep-showcase-panel {
+    flex: none;
+    padding: 32px 24px;
+  }
+
+  .ep-form-panel {
+    padding: 32px 24px;
+    max-height: none;
+  }
+
+  .ep-showcase-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .ep-register-wrapper {
+    padding: 16px 8px;
+  }
+
+  .ep-main-card {
+    border-radius: var(--ep-radius-lg);
+  }
+
+  .ep-showcase-panel {
+    display: none;
+  }
+
+  .ep-form-panel {
+    padding: 24px 16px;
+  }
+
+  .ep-form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ep-col-half {
+    grid-column: span 1;
+  }
+
+  .ep-role-selector {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ep-role-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 10px 14px;
+    gap: 12px;
+  }
+
+  .ep-role-card-icon {
+    margin-bottom: 0;
+  }
+
+  .ep-facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ep-fee-calculator-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ep-total-fee-badge {
+    text-align: left;
+  }
+}
